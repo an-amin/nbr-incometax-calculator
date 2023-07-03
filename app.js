@@ -2,6 +2,8 @@
 
 function main($)
 {
+    $(document).on('click', '#about', ()=>$(document).find('#about-modal').modal('toggle'));
+
     $(document).on('change', '#category', function(){
         $(document).find('#tax-free-income').val($(this).val()).trigger('change');
         $(document).find('.tax-free-income').text($(this).val());
