@@ -6,12 +6,12 @@
 ## Features
 * Previlege category (Male/Female/aged persons above 65/Specially-able/third-gender/freedom-fighter) selection.
 * Monthly / Yearly wise salary input.
-* Other incomes tax calculation (under development)
+* Other incomes tax calculation _(under development)_
 * Investment input and automatic tax rebate calculation.
-* Assests & surcharge calculator. (under development)
-* Liabilities calculator and tax adjustment. (under development)
+* Assests & surcharge calculator. _(under development)_
+* Liabilities calculator and tax adjustment. _(under development)_
 * AIT adjustments.
-* Export copy of return as pdf in NBR format.  (under development)
+* Export copy of return as pdf in NBR format.  _(under development)_
 
 ## Tech
 - HTML
