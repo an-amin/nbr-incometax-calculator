@@ -1,2 +1,8 @@
 .nav-tabs .nav-link{font-size: 1.2em;}
 .nav-tabs .nav-link.active{font-weight: bold;}
+
+table#tax-chart>tbody>tr>td:nth-child(2){text-align: center;}
+table#tax-chart>tbody>tr>td:nth-child(3),
+table#tax-chart>tbody>tr>td:nth-child(4),
+table#tax-chart>tfoot>tr>th:nth-child(2)
+{text-align: right;}
