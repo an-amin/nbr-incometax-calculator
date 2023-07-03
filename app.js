@@ -3,6 +3,7 @@
 function main($)
 {
     $(document).on('click', '#about', ()=>$(document).find('#about-modal').modal('toggle'));
+    $(document).on('click', '#toggle-theme', toggleTheme);
 
     $(document).on('change', '#category', function(){
         $(document).find('#tax-free-income').val($(this).val()).trigger('change');
@@ -193,4 +194,23 @@ function calculateGrossTax()
     let netTaxLiability = totalGrossTax-investmentRebate-ait;
     $(document).find('#net-tax-liability').text(netTaxLiability<0?0:netTaxLiability);
     
+}
+
+
+function toggleTheme()
+{
+    let icon = '';
+    let theme = $('html').attr('data-bs-theme');
+    if(theme =='dark')
+    {
+        theme = 'light';
+        icon = '☀️';
+    }
+    else
+    {
+        theme = 'dark';
+        icon = '🌙';
+    }
+    $('html').attr('data-bs-theme', theme);
+    $(this).text(icon);
 }
