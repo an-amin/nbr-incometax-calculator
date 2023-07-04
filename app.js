@@ -149,8 +149,11 @@ function calculateTaxableIncome()
         sumTaxable += Number($(input).val());
     });
     $(document).find('#subtotal-taxable').val(sumTaxable).trigger('change');
-    $(document).find('#max-investmentable').val(sumTaxable*0.20<1000000?sumTaxable*0.20:1000000).trigger('change');
-
+    $(document).find('#total-taxable-income').text(sumTaxable);
+    let investmentable = sumTaxable*0.20<1000000?sumTaxable*0.20:1000000;
+    let expectedTaxRebate = investmentable*0.15;
+    $(document).find('#max-investmentable').val(investmentable).trigger('change');
+    $(document).find('#expected-tax-rebate').val(expectedTaxRebate).trigger('change');
     // console.log(sumMonthly, sumYearly, sumTaxfree, sumTaxable)
     calculateGrossTax();
 }

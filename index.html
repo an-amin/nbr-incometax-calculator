@@ -87,7 +87,7 @@
                     <!-- tab:general -->
 
                     <!-- tab:salary -->
-                    <div class="tab-pane fade" id="salary" role="tabpanel" aria-labelledby="salary-tab" tabindex="0">
+                    <div class="tab-pane fade table-responsive" id="salary" role="tabpanel" aria-labelledby="salary-tab" tabindex="0">
 
                         <table id="salary-income-matrix" class="table table-bordered">
                             <thead>
@@ -194,12 +194,16 @@
                                     <input type="number" id="nsc-investment" class="form-control input-investment" min="0" >
                                 </div>
                                 <div class="form-group mb-2">
-                                    <label for="other-investment">Other Investments</label>
+                                    <label for="other-investment">Other Investments / Donations</label>
                                     <input type="number" id="other-investment" class="form-control input-investment" min="0" >
                                 </div>
                                 <div class="form-group mb-2">
                                     <label for="total-investment">Total Investment</label>
                                     <input type="number" id="total-investment" class="form-control" min="0" readonly>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="expected-tax-rebate">Expected Rebate</label>
+                                    <input type="number" id="expected-tax-rebate" class="form-control" min="0" readonly>
                                 </div>
                             </div>
                         </div>
@@ -233,6 +237,10 @@
                                     <th>%</th>
                                     <th>Calculated Tax</th>
                                     <th>Remaining</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="3"></th>
+                                    <th id="total-taxable-income" class="text-end">0</th>
                                 </tr>
                             </thead>
                             <tbody>
