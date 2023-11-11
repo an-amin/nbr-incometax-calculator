@@ -2,68 +2,53 @@
 
 function main($)
 {
-    $(document).on('click', '#about', ()=>$(document).find('#about-modal').modal('toggle'));
-    $(document).on('click', '#toggle-theme', toggleTheme);
-    $(document).on('change', '#tax-zone', ()=>$('#input-min-payable-tax').val($('#tax-zone').val()).trigger('change'));
+    $(document).ready(function(){
 
-    $(document).on('change', '#category', function(){
-        $(document).find('#tax-free-income').val($(this).val()).trigger('change');
-        $(document).find('.tax-free-income').text($(this).val());
-        calculateTaxableIncome();
+        setTimeout(()=>$('#about-modal').modal('show'), 5000);
 
-    });
+        $(document).on('click', '#about', ()=>$(document).find('#about-modal').modal('toggle'));
+        $(document).on('click', '#toggle-theme', toggleTheme);
+        $(document).on('change', '#tax-zone', ()=>$('#input-min-payable-tax').val($('#tax-zone').val()).trigger('change'));
 
-    $(document).on('keyup', '#monthly-basic', function(){
-        calculateBasic(Number($(this).val())*12);
-    });
-    $(document).on('keyup', '#yearly-basic', function(){
-        calculateBasic(Number($(this).val()));
-    });
+        $(document).on('change', '#category', function(){
+            $(document).find('#tax-free-income').val($(this).val()).trigger('change');
+            $(document).find('.tax-free-income').text($(this).val());
+            calculateTaxableIncome();
 
-
-    $(document).on('keyup', '#monthly-houserent', function(){
-        calculateHouseRent(Number($(this).val())*12);
-    });
-    $(document).on('keyup', '#yearly-houserent', function(){
-        calculateHouseRent(Number($(this).val()));
-    });
-
-
-    $(document).on('keyup', '#monthly-medical', function(){
-        calculateMedical(Number($(this).val())*12);
-    });
-    $(document).on('keyup', '#yearly-medical', function(){
-        calculateMedical(Number($(this).val()));
-    });
-    
-
-    $(document).on('keyup', '#monthly-conveyance', function(){
-        calculateConveyance(Number($(this).val())*12);
-    });
-    $(document).on('keyup', '#yearly-conveyance', function(){
-        calculateConveyance(Number($(this).val()));
-    });
-
-
-    $(document).on('keyup', '#yearly-festival', function(){
-        calculateFestival(Number($(this).val()));
-    });
-
-    $(document).on('keyup', '.input-investment', function(){
-        let totalInvestment = 0;
-        $.each($(document).find('.input-investment'), function(i,input){
-            totalInvestment += Number($(input).val());
         });
-        $(document).find('#total-investment').val(totalInvestment).trigger('change');
-        calculateTaxableIncome();
 
+
+        $(document).on('keyup', '#monthly-basic', ()=>calculateBasic(Number($('#monthly-basic').val())*12));
+        $(document).on('keyup', '#yearly-basic', ()=>calculateBasic(Number($('#yearly-basic').val())));
+
+        $(document).on('keyup', '#monthly-houserent', ()=>calculateHouseRent(Number($('#monthly-houserent').val())*12));
+        $(document).on('keyup', '#yearly-houserent', ()=>calculateHouseRent(Number($('#yearly-houserent').val())));
+
+        $(document).on('keyup', '#monthly-medical', ()=>calculateMedical(Number($('#monthly-medical').val())*12));
+        $(document).on('keyup', '#yearly-medical', ()=>calculateMedical(Number($('#yearly-medical').val())));
+
+        $(document).on('keyup', '#monthly-conveyance', ()=>calculateConveyance(Number($('#monthly-conveyance').val())*12));
+        $(document).on('keyup', '#yearly-conveyance', ()=>calculateConveyance(Number($('#yearly-conveyance').val())));
+
+        $(document).on('keyup', '#yearly-festival', ()=>calculateFestival(Number($('#yearly-festival').val())));
+
+        $(document).on('keyup', '.input-investment', function(){
+            let totalInvestment = 0;
+            $.each($(document).find('.input-investment'), function(i,input){
+                totalInvestment += Number($(input).val());
+            });
+            $(document).find('#total-investment').val(totalInvestment).trigger('change');
+            calculateTaxableIncome();
+
+        });
+        
+        $(document).on('keyup', '#input-tds-ait', function(){
+            $(document).find('#tds-ait').text($(this).val());
+            calculateTaxableIncome();
+
+        });
     });
     
-    $(document).on('keyup', '#input-tds-ait', function(){
-        $(document).find('#tds-ait').text($(this).val());
-        calculateTaxableIncome();
-
-    });
 }
 
 function calculateBasic(yearlyBasic)
