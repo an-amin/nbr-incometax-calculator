@@ -87,56 +87,56 @@
                     <!-- tab:general -->
 
                     <!-- tab:salary -->
-                    <div class="tab-pane fade table-responsive" id="salary" role="tabpanel" aria-labelledby="salary-tab" tabindex="0">
+                    <div class="tab-pane fade table-responsive-sm" id="salary" role="tabpanel" aria-labelledby="salary-tab" tabindex="0">
 
                         <table id="salary-income-matrix" class="table table-bordered">
                             <thead>
                                 <tr class="text-center">
-                                    <th>Heads</th>
-                                    <th>Monthly</th>
-                                    <th>Yearly</th>
-                                    <th>Max Tax Free Amount</th>
-                                    <th>Taxable Amount</th>
+                                    <th scope="col">Heads</th>
+                                    <th scope="col">Monthly</th>
+                                    <th scope="col">Yearly</th>
+                                    <th scope="col">Max Tax Free Amount</th>
+                                    <th scope="col">Taxable Amount</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Basic Salary</td>
+                                    <td scope="row">Basic Salary</td>
                                     <td><input type="number" id="monthly-basic" class="form-control monthly basic" min="0" tabindex="101"></td>
                                     <td><input type="number" id="yearly-basic" class="form-control yearly basic" min="0" tabindex="201"></td>
                                     <td><input type="number" id="taxfree-basic" class="form-control taxfree basic" value="0" min="0" readonly></td>
                                     <td><input type="number" id="taxable-basic" class="form-control taxable basic" min="0"  readonly></td>
                                 </tr>
                                 <tr>
-                                    <td>House Rent</td>
+                                    <td scope="row">House Rent</td>
                                     <td><input type="number" id="monthly-houserent" class="form-control houserent" min="0" tabindex="102"></td>
                                     <td><input type="number" id="yearly-houserent" class="form-control houserent" min="0" tabindex="202"></td>
                                     <td><input type="number" id="taxfree-houserent" class="form-control houserent" min="0" placeholder="50% of Basic" readonly></td>
                                     <td><input type="number" id="taxable-houserent" class="form-control houserent" min="0" readonly></td>
                                 </tr>
                                 <tr>
-                                    <td>Medical Allowance</td>
+                                    <td scope="row">Medical Allowance</td>
                                     <td><input type="number" id="monthly-medical" class="form-control medical" min="0" tabindex="103"></td>
                                     <td><input type="number" id="yearly-medical" class="form-control medical" min="0" tabindex="203"></td>
                                     <td><input type="number" id="taxfree-medical" class="form-control medical" min="0"placeholder="10% of Basic" readonly></td>
                                     <td><input type="number" id="taxable-medical" class="form-control medical" min="0" readonly></td>
                                 </tr>
                                 <tr>
-                                    <td>Conveyance Allowance</td>
+                                    <td scope="row">Conveyance Allowance</td>
                                     <td><input type="number" id="monthly-conveyance" class="form-control conveyance" min="0" tabindex="104"></td>
                                     <td><input type="number" id="yearly-conveyance" class="form-control conveyance" min="0" tabindex="204"></td>
                                     <td><input type="number" id="taxfree-conveyance" class="form-control conveyance" min="0" value="30000" readonly></td>
                                     <td><input type="number" id="taxable-conveyance" class="form-control conveyance" min="0" readonly></td>
                                 </tr>
                                 <tr>
-                                    <td>Festival Bonus</td>
+                                    <td scope="row">Festival Bonus</td>
                                     <td><input type="number" id="monthly-festival" class="form-control festival" min="0" tabindex="105"></td>
                                     <td><input type="number" id="yearly-festival" class="form-control festival" min="0" tabindex="205"></td>
                                     <td><input type="number" id="taxfree-festival" class="form-control festival" min="0" value="0" readonly></td>
                                     <td><input type="number" id="taxable-festival" class="form-control festival" min="0" readonly></td>
                                 </tr>
                                 <tr>
-                                    <td>Other Bonus</td>
+                                    <td scope="row">Other Bonus</td>
                                     <td><input type="number" id="monthly-bonus" class="form-control bonus" min="0" tabindex="106"></td>
                                     <td><input type="number" id="yearly-bonus" class="form-control bonus" min="0" tabindex="206"></td>
                                     <td><input type="number" id="taxfree-bonus" class="form-control bonus" min="0" value="0" readonly></td>
@@ -145,7 +145,7 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <td>Sub-total</td>
+                                    <td scope="row">Sub-total</td>
                                     <td><input type="number" id="subtotal-monthly" class="form-control" min="0" readonly></td>
                                     <td><input type="number" id="subtotal-yearly" class="form-control" min="0" readonly></td>
                                     <td><input type="number" id="subtotal-taxfree" class="form-control" min="0" readonly></td>
