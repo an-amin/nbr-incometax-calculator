@@ -215,11 +215,19 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="form-group mb-2">
-                                    <label for="">Minimum Tax in your area</label>
-                                    <input type="number" class="form-control" min="0">
+                                    <label for="tax-zone">Tax Zone</label>
+                                    <select type="number" id="tax-zone" class="form-control">
+                                        <option value="0" selected disabled>-select-</option>
+                                        <option value="5000">Dhaka/Chittagong City Corporation area</option>
+                                        <option value="3000">Other area</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="input-min-payable-tax">Minimum Payable Tax in your zone/area</label>
+                                    <input type="number" id="input-min-payable-tax" class="form-control" min="0" readonly>
                                 </div>
                                 <div class="fom-group mb-2">
-                                    <label for="input-tds-ait">TDS/AIT</label>
+                                    <label for="input-tds-ait">TDS/AIT paid</label>
                                     <input type="number" id="input-tds-ait" class="form-control" min="0">
                                 </div>
                             </div>
@@ -332,7 +340,7 @@
                                 [এই সফটওয়্যারটি পেশাদার পরামর্শদাতার বিকল্প নয়।]
                             </li>
                             <li>
-                                This website does nott send any data to any kind of remote server. <br>
+                                This website does not send any data to any kind of remote server. <br>
                                 [এই ওয়েবসাইট কোনও সার্ভারে তথ্য পাঠায় না।]
                             </li>
                             <li>

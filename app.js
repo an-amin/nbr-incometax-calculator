@@ -4,6 +4,7 @@ function main($)
 {
     $(document).on('click', '#about', ()=>$(document).find('#about-modal').modal('toggle'));
     $(document).on('click', '#toggle-theme', toggleTheme);
+    $(document).on('change', '#tax-zone', ()=>$('#input-min-payable-tax').val($('#tax-zone').val()).trigger('change'));
 
     $(document).on('change', '#category', function(){
         $(document).find('#tax-free-income').val($(this).val()).trigger('change');
